@@ -141,7 +141,8 @@ public class OrcFile {
     }
 
     public static WriterVersion from(int val) {
-      if (val == FUTURE.id) return FUTURE; // Special handling for the magic value.
+//      if (val == FUTURE.id) return FUTURE; // Special handling for the magic value.
+      if ((val >= values.length)) return FUTURE;
       return values[val];
     }
   }
